@@ -78,11 +78,11 @@ const Homepage = () => {
                     <div className="flex items-center justify-center">
                         <div className="relative w-full max-w-[500px] aspect-square">
                             <Image
-                                src="/santanu.png"
+                                src="/b3.jpg"
                                 alt="ASP.NET Core illustration"
                                 width={600}
                                 height={600}
-                                className=" object-cover"
+                                className="rounded-full object-cover"
                                 priority
                             />
                         </div>
