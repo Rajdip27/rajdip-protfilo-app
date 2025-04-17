@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React from 'react';
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaArrowRight, FaCode, FaDatabase, FaServer } from "react-icons/fa";
 
@@ -21,6 +23,16 @@ const expertiseData = [
 ];
 
 const Core = () => {
+
+    const fadeUpVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: (index) => ({
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, delay: index * 0.2, ease: "easeOut" },
+        }),
+    }
+
     return (
         <section className="py-16 bg-[#18181a]">
             <div className="mx-auto px-6 text-center">
@@ -35,14 +47,19 @@ const Core = () => {
                 {/* Expertise Cards */}
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {expertiseData.map((item, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="flex flex-col items-center p-6 border border-gray-700 shadow-lg rounded-xl transform transition duration-300 hover:scale-105 hover:bg-[#2d2d30] hover:shadow-xl"
+                            custom={index}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={fadeUpVariants}
+                            className="flex flex-col items-center p-6 border border-gray-700 shadow-lg rounded-xl transform hover:scale-105 hover:bg-[#2d2d30] hover:shadow-xl"
                         >
                             <div className="p-4 rounded-full bg-[#2d2d30]">{item.icon}</div>
                             <h3 className="mt-4 text-xl font-semibold text-white">{item.title}</h3>
                             <p className="mt-2 text-center text-gray-300">{item.description}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 

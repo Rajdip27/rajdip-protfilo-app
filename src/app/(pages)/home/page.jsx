@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { Typewriter } from 'react-simple-typewriter';
+import { Typewriter } from "react-simple-typewriter";
 
 const Homepage = () => {
     return (
@@ -10,15 +10,17 @@ const Homepage = () => {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid gap-6 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_600px] lg:gap-12">
                     <div className="flex flex-col justify-center space-y-6">
-                        <div>
-                            <h1 className="text-3xl sm:text-5xl xl:text-6xl font-bold tracking-tighter text-white">
+                        <div className="text-center lg:text-left">
+                            <h1 className="text-3xl sm:text-4xl xl:text-5xl font-bold tracking-tighter text-white">
                                 ASP.NET Core Developer
                             </h1>
-                            <p className="max-w-[600px] md:text-xl text-white mt-4">
-                                Hello! I'm Santanu Chandra Shialy,
-                                <span className="text-white">
+                            <p className="md:text-xl text-white mt-4">
+                                Hello! I'm Santanu Chandra Shialy,{" "}
+                                <span className="block mt-2">
                                     <Typewriter
-                                        words={[' a dedicated ASP.NET Developer with a passion for building robust and scalable web applications.']}
+                                        words={[
+                                            'a dedicated ASP.NET Developer with a passion for building robust and scalable web applications.',
+                                        ]}
                                         loop={1}
                                         cursor
                                         cursorStyle="|"
@@ -30,7 +32,7 @@ const Homepage = () => {
                             </p>
                         </div>
 
-                        <div className="flex flex-col min-[350px]:flex-row gap-4">
+                        <div className="flex flex-col lg:flex-row md:flex-row md:justify-center lg:justify-start sm:items-center md:items-center gap-4">
                             <Link
                                 href="/projects"
                                 className="px-4 py-2 text-lg font-medium text-black bg-white rounded-lg shadow-md transition-transform duration-300 hover:scale-105"
@@ -76,11 +78,11 @@ const Homepage = () => {
                     <div className="flex items-center justify-center">
                         <div className="relative w-full max-w-[500px] aspect-square">
                             <Image
-                                src="/Seth_Rollins.png"
+                                src="/santanu.png"
                                 alt="ASP.NET Core illustration"
                                 width={600}
                                 height={600}
-                                className="rounded-lg object-cover"
+                                className=" object-cover"
                                 priority
                             />
                         </div>
