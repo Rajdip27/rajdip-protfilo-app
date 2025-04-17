@@ -3,27 +3,52 @@ import React from 'react';
 const page = () => {
     const experiences = [
         {
-            title: "Software Engineer",
-            company: "Piis Tech.",
-            duration: "2024 - Present",
-            description: "Lead developer for enterprise-level ASP.NET Core applications, focusing on microservices architecture and cloud deployment.",
+            title: "Jr. Software Engineer (ASP.NET Core)",
+            company: "Piistech Limited",
+            duration: "March 2024 – Present",
+            description:
+                "Currently contributing to HR, payroll, and inventory management systems using ASP.NET Core and Entity Framework Core.",
             responsibilities: [
-                "Architected and developed scalable web applications using ASP.NET Core and Blazor",
-                "Implemented CI/CD pipelines for automated testing and deployment to Azure",
-                "Mentored junior developers and conducted code reviews",
-                "Optimized database performance and implemented efficient data access patterns",
+                "Developing and maintaining HR and inventory management systems using ASP.NET Core MVC",
+                "Utilizing Entity Framework Core for data access and SQL Server 2018 for database management",
+                "Collaborating with the team to deliver scalable, maintainable enterprise solutions",
+                "Participating in ongoing development of e-commerce inventory modules",
             ],
         },
         {
-            title: ".NET Developer",
-            company: "Soft Tech.",
-            duration: "2023 - 2024",
-            description: "Developed and maintained web applications using ASP.NET Core, focusing on RESTful APIs and database integration.",
+            title: "Jr. Software Engineer (ASP.NET Core)",
+            company: "TechSoft Limited",
+            duration: "January 2023 – February 2024",
+            description:
+                "Worked on LMS and Job Portal Management Systems focusing on ASP.NET Core and Microsoft SQL Server.",
             responsibilities: [
-                "Built RESTful APIs using ASP.NET Core Web API",
-                "Implemented data access layers using Entity Framework Core",
-                "Integrated third-party services and payment gateways",
-                "Collaborated with frontend developers to create seamless user experiences",
+                "Developed web features for LMS and JPMS platforms using ASP.NET Core",
+                "Used SQL Server 2018 and Entity Framework Core for database handling",
+                "Customized ERP modules and implemented client-specific features",
+                "Worked closely with cross-functional teams for software deployment and feedback",
+            ],
+        },
+        {
+            title: "Software Development Intern",
+            company: "Tactsoft Limited",
+            duration: "September 2022 – December 2022",
+            description:
+                "Gained hands-on experience in .NET development and relational databases.",
+            responsibilities: [
+                "Assisted in developing internal tools using ASP.NET and SQL Server 2019",
+                "Learned version control with Git and project management using Trello",
+                "Participated in team meetings and sprint planning",
+            ],
+        },
+        {
+            title: "Professional Training",
+            company: "Sky IT Ltd. (Barisal)",
+            duration: "2021 – 2022",
+            description:
+                "Completed professional training in ASP.NET Core, C# OOP, and MS SQL Server.",
+            responsibilities: [
+                "Learned full-stack web development fundamentals using .NET technologies",
+                "Practiced real-world scenarios and mini-projects in a structured environment",
             ],
         },
     ];

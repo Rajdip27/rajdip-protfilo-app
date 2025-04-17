@@ -6,7 +6,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const Homepage = () => {
     return (
-        <section className="w-full py-8 md:py-24 lg:py-28 xl:py-32 bg-black">
+        <section className="w-full pt-20 py-8 md:py-24 lg:py-28 xl:py-32 bg-black">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid gap-6 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_600px] lg:gap-12">
                     <div className="flex flex-col justify-center space-y-6">
@@ -45,19 +45,27 @@ const Homepage = () => {
                             </Link>
                         </div>
 
-                        <div className="flex justify-center lg:justify-start gap-6">
+                        <div className="flex justify-center lg:justify-start flex-wrap gap-4 sm:gap-6 mt-4">
                             {[
-                                { href: "https://github.com/Rajdip27", icon: <FaGithub className="text-2xl" />, color: "gray-500/50" },
-                                { href: "https://www.linkedin.com/in/rajdip-raj-santanu-7b0175253/", icon: <FaLinkedinIn className="text-2xl" />, color: "blue-500/50" }
+                                {
+                                    href: "https://github.com/Rajdip27",
+                                    icon: <FaGithub className="text-xl sm:text-2xl" />,
+                                    shadow: "shadow-gray-500/50",
+                                },
+                                {
+                                    href: "https://www.linkedin.com/in/rajdip-raj-santanu-7b0175253/",
+                                    icon: <FaLinkedinIn className="text-xl sm:text-2xl" />,
+                                    shadow: "shadow-blue-500/50",
+                                },
                             ].map((item, index) => (
                                 <a
                                     key={index}
                                     href={item.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group relative"
+                                    className="group"
                                 >
-                                    <div className={`relative p-3 text-white rounded-lg border border-white/20 backdrop-blur-sm transition-transform duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-${item.color}`}>
+                                    <div className={`p-3 sm:p-4 text-white rounded-full border border-white/20 backdrop-blur-md transition-transform duration-300 group-hover:scale-110 group-hover:shadow-md ${item.shadow}`}>
                                         {item.icon}
                                     </div>
                                 </a>
