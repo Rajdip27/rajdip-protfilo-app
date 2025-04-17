@@ -20,7 +20,7 @@ const page = () => {
                                 <FaEnvelope className="w-6 h-6 text-white" />
                                 <div>
                                     <h6 className="text-lg font-semibold text-white">Email</h6>
-                                    <p className="text-white/70 break-words">portfolio@gmail.com</p>
+                                    <p className="text-white/70 break-words">srajdip920@gmail.com</p>
                                 </div>
                             </div>
                             {/* Location */}
@@ -28,7 +28,7 @@ const page = () => {
                                 <FaMapMarkerAlt className="w-6 h-6" />
                                 <div>
                                     <h6 className="text-lg font-semibold text-white">Location</h6>
-                                    <p className="text-white/70">Mirpur, Dhaka 1216</p>
+                                    <p className="text-white/70">Dhanmondi, Dhaka 1216</p>
                                 </div>
                             </div>
                         </div>

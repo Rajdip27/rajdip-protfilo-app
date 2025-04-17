@@ -1,23 +1,60 @@
+"use client";
+import { motion } from "framer-motion";
 import React from 'react';
 
 const skillsData = [
     {
         title: "Languages",
-        skills: ["C#", "JavaScript", "TypeScript", "HTML", "CSS", "SQL"],
+        skills: ["C#", "JavaScript", "HTML", "CSS", "SQL"],
     },
     {
         title: "Frameworks & Libraries",
-        skills: ["ASP.NET Core", "Blazor", "Entity Framework Core", "SignalR", "MVC", "Web API", "React"],
+        skills: [
+            "ASP.NET Core",
+            "Entity Framework Core",
+            "Blazor",
+            "SignalR",
+            "MVC",
+            "Web API",
+            "React.js",
+            "Angular",
+            "jQuery",
+            "Bootstrap",
+            "Material-UI",
+            "Node.js"
+        ],
     },
     {
         title: "Tools & Platforms",
-        skills: ["Visual Studio", "VS Code", "Azure", "Docker", "Git", "CI/CD", "SQL Server", "PostgreSQL"],
+        skills: [
+            "Visual Studio",
+            "VS Code",
+            "Git",
+            "GitHub",
+            "Trello",
+            "Microsoft Outlook",
+            "SQL Server 2018/2019/2020",
+            "MongoDB",
+            "NPM",
+            "Docker",
+            "Azure"
+        ],
     },
 ];
 
+const fadeUpVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (index) => ({
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.6, delay: index * 0.2, ease: "easeOut" },
+    }),
+};
+
+
 const Page = () => {
     return (
-        <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-6 py-24 md:py-24 lg:py-32 ">
+        <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-6 py-24 md:py-24 lg:py-32">
             <div className="container px-6 md:px-12 mx-auto">
                 {/* Section Heading */}
                 <div className="text-center space-y-4">
@@ -32,9 +69,14 @@ const Page = () => {
                 {/* Skills Grid */}
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12">
                     {skillsData.map((category, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="p-6 bg-gray-800 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                            custom={index}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            variants={fadeUpVariants}
+                            className="p-6 bg-gray-800 rounded-xl shadow-lg  hover:scale-105 hover:shadow-xl"
                         >
                             <h3 className="text-xl font-semibold text-white border-l-4 border-violet-500 pl-3">
                                 {category.title}
@@ -49,7 +91,7 @@ const Page = () => {
                                     </span>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
